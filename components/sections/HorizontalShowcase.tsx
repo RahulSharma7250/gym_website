@@ -86,19 +86,17 @@ export default function HorizontalShowcase() {
       {/* Horizontal Track */}
       <div
         ref={trackRef}
-        className="flex items-center h-screen gap-8 px-10 pl-[28vw]"
+        className="flex items-center h-screen gap-8 px-6 md:px-10 pl-[10vw] md:pl-[28vw] pt-20 md:pt-32"
         style={{ willChange: "transform" }}
       >
         {SHOWCASE_ITEMS.map((item, i) => (
           <div
             key={i}
-            className="hscroll-card flex-shrink-0 relative group"
-            style={{ width: "38vw", height: "62vh" }}
+            className="hscroll-card flex-shrink-0 relative group w-[85vw] md:w-[45vw] lg:w-[38vw] h-[50vh] md:h-[62vh]"
           >
             {/* Large number — floating above each card */}
             <div
-              className="absolute -top-14 right-4 font-bebas text-[clamp(80px,10vw,160px)] text-white leading-none select-none z-20 pointer-events-none"
-              style={{ textShadow: "0 0 40px rgba(255,77,0,0.6)" }}
+              className="absolute -top-14 right-4 font-bebas text-[clamp(60px,8vw,120px)] text-[#FF6600] leading-none select-none z-20 pointer-events-none"
             >
               {item.num}
             </div>

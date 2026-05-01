@@ -152,7 +152,7 @@ export default function Hero() {
         </div>
 
         {/* ── Athlete Image ── */}
-        <div ref={athleteRef} className="relative h-[85%] aspect-[3/4] mt-auto z-[12] flex items-end justify-center">
+        <div ref={athleteRef} className="relative h-[75%] sm:h-[80%] md:h-[85%] aspect-[3/4] mt-auto z-[12] flex items-end justify-center">
           <img
             src="/body1.png"
             alt="Inferno Gym Athlete"

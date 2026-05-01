@@ -10,12 +10,12 @@ import EmberParticles from "@/components/ui/EmberParticles";
 gsap.registerPlugin(ScrollTrigger);
 
 const COACHES = [
-  { name: "MARCUS KANE", bio: "Former champion powerlifter finding perfect form.", initials: "MK", exp: "12 YRS" },
-  { name: "SARAH VOSS", bio: "Elite mobility and HIIT coach. High energy.", initials: "SV", exp: "8 YRS" },
-  { name: "TYLER DURD", bio: "Combat specialist. Muay Thai and BJJ.", initials: "TD", exp: "15 YRS" },
-  { name: "ALINA ROST", bio: "Agility and track conditioning.", initials: "AR", exp: "6 YRS" },
-  { name: "JIMMY CRANE", bio: "Strength and conditioning for field athletes.", initials: "JC", exp: "9 YRS" },
-  { name: "ZARA LEO", bio: "Yoga and post-injury recovery.", initials: "ZL", exp: "10 YRS" },
+  { name: "VIKRAM SINGH", bio: "Former champion powerlifter finding perfect form.", initials: "VS", exp: "12 YRS" },
+  { name: "KAVYA RAO", bio: "Elite mobility and HIIT coach. High energy.", initials: "KR", exp: "8 YRS" },
+  { name: "KARAN VEER", bio: "Combat specialist. Muay Thai and BJJ.", initials: "KV", exp: "15 YRS" },
+  { name: "ANJALI RAJ", bio: "Agility and track conditioning.", initials: "AR", exp: "6 YRS" },
+  { name: "JAYESH CHAVAN", bio: "Strength and conditioning for field athletes.", initials: "JC", exp: "9 YRS" },
+  { name: "ZOYA LUTHRA", bio: "Yoga and post-injury recovery.", initials: "ZL", exp: "10 YRS" },
 ];
 
 export default function CoachesPage() {

@@ -10,12 +10,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FILTERS = ["ALL", "STRENGTH", "CARDIO", "MMA", "CROSSFIT"];
 const ATHLETES = [
-  { name: "JAXON REID", tag: "STRENGTH", stats: { weight: "500LB DL", exp: "8 YRS", wins: "12" }, bg: "from-fire-red to-deep-black" },
-  { name: "MIA THORNE", tag: "CARDIO", stats: { weight: "MARATHON", exp: "5 YRS", wins: "4" }, bg: "from-fire-orange to-deep-black" },
-  { name: "LEO VANCE", tag: "MMA", stats: { weight: "185LB CL", exp: "10 YRS", wins: "24-0" }, bg: "from-fire-amber to-deep-black" },
-  { name: "ZARA QUINN", tag: "CROSSFIT", stats: { weight: "TOP 50", exp: "4 YRS", wins: "6" }, bg: "from-fire-red to-[#1A0A00]" },
-  { name: "KAE BLAKE", tag: "STRENGTH", stats: { weight: "600LB SQ", exp: "12 YRS", wins: "18" }, bg: "from-[#1A0A00] to-fire-orange" },
-  { name: "SAM CROSS", tag: "MMA", stats: { weight: "155LB CL", exp: "6 YRS", wins: "15-2" }, bg: "from-[#3D2010] to-fire-red" }
+  { name: "ARJUN REDDY", tag: "STRENGTH", stats: { weight: "225KG DL", exp: "8 YRS", wins: "12" }, bg: "from-fire-red to-deep-black" },
+  { name: "NEHA SHARMA", tag: "CARDIO", stats: { weight: "MARATHON", exp: "5 YRS", wins: "4" }, bg: "from-fire-orange to-deep-black" },
+  { name: "KABIR DASS", tag: "MMA", stats: { weight: "84KG CL", exp: "10 YRS", wins: "24-0" }, bg: "from-fire-amber to-deep-black" },
+  { name: "TARA MEHTA", tag: "CROSSFIT", stats: { weight: "TOP 50", exp: "4 YRS", wins: "6" }, bg: "from-fire-red to-[#1A0A00]" },
+  { name: "RISHABH JAIN", tag: "STRENGTH", stats: { weight: "270KG SQ", exp: "12 YRS", wins: "18" }, bg: "from-[#1A0A00] to-fire-orange" },
+  { name: "AMAN VERMA", tag: "MMA", stats: { weight: "70KG CL", exp: "6 YRS", wins: "15-2" }, bg: "from-[#3D2010] to-fire-red" }
 ];
 
 export default function Athletes() {

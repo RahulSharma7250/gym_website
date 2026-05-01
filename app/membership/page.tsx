@@ -58,7 +58,7 @@ const TIERS = [
     name: "STARTER",
     icon: <FlameIcon />,
     tagline: "Get your feet in the fire.",
-    price: { monthly: 29, annual: Math.floor(29 * 12 * 0.8) },
+    price: { monthly: 2499, annual: Math.floor(2499 * 12 * 0.8) },
     cta: "START BURNING",
     features: [
       "Full gym floor access", "Locker room & showers", "1 group class per week",
@@ -70,7 +70,7 @@ const TIERS = [
     name: "PRO",
     icon: <BoltIcon />,
     tagline: "For those who refuse to plateau.",
-    price: { monthly: 59, annual: Math.floor(59 * 12 * 0.8) },
+    price: { monthly: 4999, annual: Math.floor(4999 * 12 * 0.8) },
     popular: true,
     cta: "CATCH FIRE",
     features: [
@@ -84,7 +84,7 @@ const TIERS = [
     name: "ELITE",
     icon: <CrownIcon />,
     tagline: "Absolutely everything. No limits.",
-    price: { monthly: 99, annual: Math.floor(99 * 12 * 0.8) },
+    price: { monthly: 8999, annual: Math.floor(8999 * 12 * 0.8) },
     cta: "START BURNING",
     features: [
       "Everything in Pro", "4 PT sessions / month", "VIP locker",
@@ -270,7 +270,7 @@ export default function MembershipPage() {
 
                 {/* Price */}
                 <div className="flex items-end justify-center gap-1 mb-6 leading-none">
-                  <span className="font-bebas text-2xl text-[#FF6600] mb-1">$</span>
+                  <span className="font-bebas text-2xl text-[#FF6600] mb-1">₹</span>
                   <AnimatePresence mode="popLayout">
                     <motion.span
                       key={price}

@@ -64,15 +64,15 @@ export default function SubscribePage() {
         {/* Pricing Layout */}
         <div ref={pricesRef} className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 perspective-[1000px]">
            {[
-             { name: "STARTER", price: annual ? Math.floor(29*12*0.8) : 29 },
-             { name: "PRO", price: annual ? Math.floor(59*12*0.8) : 59, pop: true },
-             { name: "ELITE", price: annual ? Math.floor(99*12*0.8) : 99 }
+             { name: "STARTER", price: annual ? Math.floor(2499*12*0.8) : 2499 },
+             { name: "PRO", price: annual ? Math.floor(4999*12*0.8) : 4999, pop: true },
+             { name: "ELITE", price: annual ? Math.floor(8999*12*0.8) : 8999 }
            ].map((tier, i) => (
               <div key={tier.name} className={`pricing-tier bg-[#0a0500] p-8 clip-diagonal flex flex-col relative ${tier.pop ? 'border-2 border-fire-orange md:scale-110 shadow-2xl z-20' : 'border border-white/10 hover:border-fire-orange/50'}`}>
                  {tier.pop && <div className="absolute top-0 right-0 bg-fire-orange text-black font-barlow-condensed font-bold text-xs tracking-widest px-3 py-1 clip-diagonal">MOST POPULAR</div>}
                  <h2 className="font-bebas text-4xl mb-4">{tier.name}</h2>
                  <div className="font-bebas text-7xl text-white mb-8 flex items-end leading-none">
-                    <span className="text-3xl text-fire-orange mb-2 mr-1">$</span>
+                    <span className="text-3xl text-fire-orange mb-2 mr-1">₹</span>
                     {/* Key changes trigger React render replacing element, allowing simple framer motion jump */}
                     <AnimatePresence mode="popLayout">
                         <motion.span 

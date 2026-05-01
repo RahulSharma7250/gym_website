@@ -33,27 +33,27 @@ export default function About() {
       <div className="absolute inset-0 w-full md:w-[55%] bg-[#ff4d00] z-10 hidden md:block" style={{ clipPath: "polygon(0 0, 100% 0, 85% 100%, 0 100%)" }}></div>
 
       {/* Left Image Section */}
-      <div className="absolute inset-0 w-full md:w-[55%] bg-black z-20 about-left" style={{ clipPath: "polygon(0 0, calc(100% - 6px) 0, calc(85% - 6px) 100%, 0 100%)" }}>
+      <div className="relative md:absolute top-0 left-0 w-full md:w-[55%] h-[400px] md:h-full bg-black z-20 about-left" style={{ clipPath: typeof window !== 'undefined' && window.innerWidth >= 768 ? "polygon(0 0, calc(100% - 6px) 0, calc(85% - 6px) 100%, 0 100%)" : "none" }}>
         <img src="/images/about_weightlifter.png" alt="Weightlifter" className="absolute inset-0 w-full h-full object-cover object-top opacity-70 mix-blend-lighten" />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
 
         {/* Text */}
         <div className="absolute inset-y-0 left-0 p-8 lg:pl-[10%] xl:pl-[15%] flex flex-col justify-center">
-          <div className="font-bebas text-[140px] md:text-[180px] leading-[0.8] flex items-end">
+          <div className="font-bebas text-[100px] md:text-[140px] lg:text-[180px] leading-[0.8] flex items-end">
             <span className="text-transparent font-bold tracking-tighter" style={{ WebkitTextStroke: "3px #ff4d00" }}>
               <CountUp end={10} duration={2.5} />
             </span>
-            <span className="text-[#ff4d00] text-[100px] md:text-[140px] leading-[0.8] ml-2 mb-2 md:mb-4">+</span>
+            <span className="text-[#ff4d00] text-[80px] md:text-[120px] lg:text-[140px] leading-[0.8] ml-2 mb-2 md:mb-4">+</span>
           </div>
           <div className="font-bebas text-4xl md:text-5xl text-white mt-2 tracking-wider">YEARS</div>
-          <div className="font-bebas text-lg md:text-xl text-white mt-6 tracking-widest uppercase">
+          <div className="font-bebas text-lg md:text-xl text-white mt-4 md:mt-6 tracking-widest uppercase">
             Forging Champions Since 2014
           </div>
         </div>
       </div>
 
       {/* Right Side Content Container */}
-      <div className="w-full md:w-[55%] ml-auto py-16 px-8 lg:pr-[10%] xl:pr-[15%] flex flex-col justify-center relative z-10 about-right">
+      <div className="w-full md:w-[55%] ml-auto py-12 md:py-16 px-6 md:px-8 lg:pr-[10%] xl:pr-[15%] flex flex-col justify-center relative z-10 about-right">
 
         {/* Top Slanted Images Collage */}
         <div className="absolute top-0 right-0 w-[90%] md:w-[85%] h-48 md:h-56 hidden md:flex gap-2">

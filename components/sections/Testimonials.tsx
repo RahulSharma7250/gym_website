@@ -8,19 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const LEFT_TESTIMONIALS = [
   {
-    name: "JOHN D.",
+    name: "RAHUL K.",
     quote: "I thought I knew what training was until I came here. It's brutal, and it works.",
   },
 ];
 
 const RIGHT_TESTIMONIALS = [
   {
-    name: "ALEXA M.",
+    name: "PRIYA M.",
     quote: "The community pushes you past your limits. You can't hide in the back here.",
   },
   {
-    name: "DAVID R.",
-    quote: "Lost 40lbs, gained a family. Inferno changed everything.",
+    name: "SUNIL R.",
+    quote: "Lost 18kg, gained a family. Inferno changed everything.",
   },
 ];
 
@@ -125,7 +125,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_1fr] gap-0 items-center min-h-[600px]">
 
           {/* ── LEFT COLUMN ── */}
-          <div className="flex flex-col justify-between gap-20 pr-6 py-4 h-full">
+          <div className="flex flex-col justify-between gap-12 lg:gap-20 pr-0 lg:pr-6 py-8 lg:py-4 h-full">
             {/* Title block */}
             <div ref={titleRef}>
               <h2 className="font-bebas text-6xl md:text-7xl text-white leading-none tracking-tight mb-3">
@@ -150,7 +150,7 @@ export default function Testimonials() {
           <div className="hidden lg:block" />
 
           {/* ── RIGHT COLUMN ── */}
-          <div className="flex flex-col justify-center gap-14 pl-6 py-4">
+          <div className="flex flex-col justify-center gap-12 lg:gap-14 pl-0 lg:pl-6 py-8 lg:py-4">
             {RIGHT_TESTIMONIALS.map((t, i) => (
               <TestimonialCard
                 key={i}

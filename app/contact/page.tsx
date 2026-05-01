@@ -211,9 +211,8 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <span className="text-[#FF6600] mt-1"><IconPin /></span>
                   <div className="text-left">
-                    <p>123 Ember Street</p>
-                    <p className="mt-1">Downtown, Fire City</p>
-                    <p className="mt-1 text-gray-500">FC 90210</p>
+                    <p>123 Agni Marg, Sector 5</p>
+                    <p>Andheri West, Mumbai, MH 400053</p>
                   </div>
                 </div>
               </div>
@@ -239,7 +238,7 @@ export default function ContactPage() {
               <div className="flex flex-col items-start gap-5 mt-1 font-barlow text-gray-300 text-sm w-full px-2">
                 <div className="flex items-center gap-4 w-full border-b border-white/10 pb-4">
                   <span className="text-[#FF6600]"><IconPhone /></span>
-                  <span>+1 (555) 420-BURN</span>
+                  <span>+91 98765 43210</span>
                 </div>
                 <div className="flex items-start gap-4 w-full">
                   <span className="text-[#FF6600] mt-1"><IconClock /></span>
@@ -337,7 +336,7 @@ export default function ContactPage() {
           {/* Heading */}
           <div style={{ textAlign: "center", marginBottom: 48, position: "relative" }}>
             {/* Watermark */}
-            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", pointerEvents: "none", zIndex: 0 }}>
+            <div className="hidden md:flex" style={{ position: "absolute", inset: 0, alignItems: "center", justifyContent: "center", overflow: "hidden", pointerEvents: "none", zIndex: 0 }}>
               <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontStyle: "italic", fontSize: "clamp(80px,18vw,200px)", color: "rgba(255,255,255,0.03)", lineHeight: 1, whiteSpace: "nowrap" }}>SEND</span>
             </div>
             <div style={{ position: "relative", zIndex: 1 }}>
@@ -355,7 +354,7 @@ export default function ContactPage() {
           </div>
 
           {/* Two-column layout */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 24, alignItems: "start" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-6 items-start">
 
             {/* LEFT — info panel */}
             <div className="glow-card" style={{ padding: "32px 24px" }}>
@@ -380,7 +379,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
 
                 {/* Row 1 */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="field-label">FULL NAME</label>
                     <div className="input-wrap">
@@ -465,13 +464,13 @@ export default function ContactPage() {
           </div>
 
           {/* Two columns */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, alignItems: "start" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
 
             {/* LEFT — contact info rows */}
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {[
-                { Icon: IconPin, label: "ADDRESS", lines: ["123 Ember Street", "Downtown, Fire City, FC 90210"] },
-                { Icon: IconPhone, label: "PHONE", lines: ["+1 (555) 420-BURN", "Mon–Fri: 5AM – 11PM  |  Sat–Sun: 7AM – 9PM"] },
+                { Icon: IconPin, label: "ADDRESS", lines: ["123 Agni Marg, Sector 5", "Andheri West, Mumbai, MH 400053"] },
+                { Icon: IconPhone, label: "PHONE", lines: ["+91 98765 43210", "Mon–Fri: 5AM – 11PM  |  Sat–Sun: 7AM – 9PM"] },
                 { Icon: IconMail, label: "EMAIL", lines: ["info@infernogym.com", "coaching@infernogym.com"] },
                 { Icon: IconClock, label: "HOURS", lines: ["Mon–Fri: 5AM – 11PM", "Sat–Sun: 7AM – 9PM"] },
               ].map(({ Icon, label, lines }, i) => (
@@ -551,7 +550,7 @@ export default function ContactPage() {
 
           {/* Heading */}
           <div style={{ textAlign: "center", marginBottom: 48, position: "relative" }}>
-            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", pointerEvents: "none", zIndex: 0 }}>
+            <div className="hidden md:flex" style={{ position: "absolute", inset: 0, alignItems: "center", justifyContent: "center", overflow: "hidden", pointerEvents: "none", zIndex: 0 }}>
               <span style={{ fontFamily: "'Barlow Condensed'", fontWeight: 900, fontStyle: "italic", fontSize: "clamp(80px,20vw,220px)", color: "rgba(255,255,255,0.025)", lineHeight: 1, whiteSpace: "nowrap" }}>HOURS</span>
             </div>
             <div style={{ position: "relative", zIndex: 1 }}>
@@ -573,7 +572,7 @@ export default function ContactPage() {
           </div>
 
           {/* Cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { day: "WEEKDAYS", time: "5:00 AM — 11:00 PM" },
               { day: "WEEKENDS", time: "7:00 AM — 9:00 PM" },

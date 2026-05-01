@@ -12,7 +12,7 @@ const PROGRAMS = [
   {
     title: "STRENGTH",
     desc: "Build raw power and muscle mass with our heavy lifting regimens.",
-    stat: "800+ LBS",
+    stat: "360+ KG",
     image: "/images/stren.png"
   },
   {
@@ -70,7 +70,7 @@ export default function Programs() {
             {/* Top visual area: large number + image */}
             <div className="relative w-full aspect-[3/4] flex items-end justify-center -mb-20 overflow-visible">
               {/* Large Number background */}
-              <div className="prog-number absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bebas text-[280px] leading-none text-[#ff4d00] z-0 select-none tracking-tighter opacity-90 transition-transform duration-700 group-hover:scale-105 group-hover:text-[#ff6a00]">
+              <div className="prog-number absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bebas text-[220px] md:text-[260px] lg:text-[280px] leading-none text-[#ff4d00] z-0 select-none tracking-tighter opacity-90 transition-transform duration-700 group-hover:scale-105 group-hover:text-[#ff6a00]">
                 0{i + 1}
               </div>
 
@@ -80,7 +80,7 @@ export default function Programs() {
                   <img
                     src={prog.image}
                     alt={prog.title}
-                    className="w-[95%] max-w-none h-[95%] mb-40 object-contain object-bottom drop-shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-105"
+                    className="w-[95%] max-w-none h-[95%] mb-20 md:mb-32 lg:mb-40 object-contain object-bottom drop-shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-105"
                   />
                 )}
               </div>

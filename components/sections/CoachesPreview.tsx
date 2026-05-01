@@ -11,34 +11,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 const COACHES = [
   {
-    name: "SARAH VOSS",
+    name: "KAVYA RAO",
     specialty: "HIIT / MOBILITY",
-    initials: "SV",
+    initials: "KR",
     bio: "Will break you and put you back together.",
     exp: "8 YRS",
     image: "/images/coach5.png",
     side: "left", // text on left, image on right
-    style: { left: "120px", top: "50%", transform: "translateY(-50%)" },
+    desktopClasses: "md:left-[120px] md:top-[50%] md:-translate-y-1/2",
   },
   {
-    name: "MARCUS KANE",
+    name: "VIKRAM SINGH",
     specialty: "POWERLIFTING",
-    initials: "MK",
+    initials: "VS",
     bio: "Former national champ. Built like a tank.",
     exp: "12 YRS",
     image: "/images/coach3.png",
     side: "right",
-    style: { right: "60px", top: "30px" },
+    desktopClasses: "md:right-[60px] md:top-[30px]",
   },
   {
-    name: "TYLER DURD",
+    name: "KARAN VEER",
     specialty: "MMA COMBAT",
-    initials: "TD",
+    initials: "KV",
     bio: "Striking specialist. No excuses.",
     exp: "15 YRS",
     image: "/images/coach4.png",
     side: "right",
-    style: { right: "60px", bottom: "30px" },
+    desktopClasses: "md:right-[60px] md:bottom-[30px]",
   },
 ];
 
@@ -96,13 +96,12 @@ export default function CoachesPreview() {
         </div>
 
         {/* Coaches */}
-        <div className="relative h-[580px] mt-2">
+        <div className="relative h-auto md:h-[580px] mt-10 md:mt-2 flex flex-col md:block gap-12 md:gap-0">
           {COACHES.map((coach, i) => (
             <div
               key={i}
-              className={`coach-item absolute flex items-center gap-6 group ${coach.side === "left" ? "flex-row-reverse" : ""
+              className={`coach-item relative md:absolute flex flex-col md:flex-row items-center gap-6 group ${coach.desktopClasses} ${coach.side === "left" ? "md:flex-row-reverse" : ""
                 }`}
-              style={coach.style as React.CSSProperties}
             >
               {/* Profile Image */}
               <div className="relative w-40 h-40 shrink-0">
@@ -132,7 +131,7 @@ export default function CoachesPreview() {
 
               {/* Coach Info */}
               <div
-                className={`flex flex-col max-w-[260px] ${coach.side === "left" ? "items-end text-right" : "items-start text-left"
+                className={`flex flex-col max-w-[260px] items-center text-center md:items-start md:text-left ${coach.side === "left" ? "md:items-end md:text-right" : ""
                   }`}
               >
                 <h3
