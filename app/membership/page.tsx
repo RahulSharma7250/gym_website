@@ -12,43 +12,43 @@ gsap.registerPlugin(ScrollTrigger);
 // ── SVG Icons ──────────────────────────────────────────────
 const FlameIcon = ({ size = 40 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 40 40" fill="none">
-    <path d="M20 4C20 4 11 14 11 22a9 9 0 0018 0c0-6-4-10-4-10s-1.5 3-3.5 3c-2 0-2-2-2-2s2-5 0-9z" fill="#FF6600" opacity="0.85"/>
-    <path d="M20 13C20 13 16 18 16 22a4 4 0 008 0c0-2.5-1.5-4-2-5s-1 1.5-2 1.5c-1 0 0-5.5 0-5.5z" fill="#FF6600"/>
+    <path d="M20 4C20 4 11 14 11 22a9 9 0 0018 0c0-6-4-10-4-10s-1.5 3-3.5 3c-2 0-2-2-2-2s2-5 0-9z" fill="#FF6600" opacity="0.85" />
+    <path d="M20 13C20 13 16 18 16 22a4 4 0 008 0c0-2.5-1.5-4-2-5s-1 1.5-2 1.5c-1 0 0-5.5 0-5.5z" fill="#FF6600" />
   </svg>
 );
 
 const BoltIcon = ({ size = 40 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 40 40" fill="none">
-    <path d="M22 4L8 22H18L16 36L32 18H22L22 4z" fill="#FF6600"/>
+    <path d="M22 4L8 22H18L16 36L32 18H22L22 4z" fill="#FF6600" />
   </svg>
 );
 
 const CrownIcon = ({ size = 40 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 40 40" fill="none">
-    <path d="M6 30h28v3H6z" fill="#FF6600" opacity="0.7"/>
-    <path d="M6 30L10 14l8 8L20 10l2 12 8-8 4 16H6z" fill="#FF6600"/>
+    <path d="M6 30h28v3H6z" fill="#FF6600" opacity="0.7" />
+    <path d="M6 30L10 14l8 8L20 10l2 12 8-8 4 16H6z" fill="#FF6600" />
   </svg>
 );
 
 const CheckIcon = () => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <circle cx="10" cy="10" r="9" stroke="#FF6600" strokeWidth="1.5"/>
-    <path d="M6 10l3 3 5-5" stroke="#FF6600" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="10" cy="10" r="9" stroke="#FF6600" strokeWidth="1.5" />
+    <path d="M6 10l3 3 5-5" stroke="#FF6600" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
 const CrossIcon = () => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <circle cx="10" cy="10" r="9" stroke="#444" strokeWidth="1.5"/>
-    <path d="M7 7l6 6M13 7l-6 6" stroke="#555" strokeWidth="1.5" strokeLinecap="round"/>
+    <circle cx="10" cy="10" r="9" stroke="#444" strokeWidth="1.5" />
+    <path d="M7 7l6 6M13 7l-6 6" stroke="#555" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 );
 
 const CheckSolid = () => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <circle cx="10" cy="10" r="10" fill="#FF6600" opacity="0.2"/>
-    <circle cx="10" cy="10" r="9" stroke="#FF6600" strokeWidth="1.5"/>
-    <path d="M6 10l3 3 5-5" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="10" cy="10" r="10" fill="#FF6600" opacity="0.2" />
+    <circle cx="10" cy="10" r="9" stroke="#FF6600" strokeWidth="1.5" />
+    <path d="M6 10l3 3 5-5" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
@@ -61,9 +61,9 @@ const TIERS = [
     price: { monthly: 29, annual: Math.floor(29 * 12 * 0.8) },
     cta: "START BURNING",
     features: [
-      "Full gym floor access","Locker room & showers","1 group class per week",
-      "Mobile app access","Progress tracking","Basic nutrition guide",
-      "Open gym hours","Community access",
+      "Full gym floor access", "Locker room & showers", "1 group class per week",
+      "Mobile app access", "Progress tracking", "Basic nutrition guide",
+      "Open gym hours", "Community access",
     ],
   },
   {
@@ -74,10 +74,10 @@ const TIERS = [
     popular: true,
     cta: "CATCH FIRE",
     features: [
-      "Everything in Starter","Unlimited group classes","Recovery zone access",
-      "Sauna & ice bath","Custom nutrition plan","Monthly body scan",
-      "Priority class booking","1 PT session / month","Guest pass (1/mo)",
-      "Exclusive member events","Online workout library","Coach messaging",
+      "Everything in Starter", "Unlimited group classes", "Recovery zone access",
+      "Sauna & ice bath", "Custom nutrition plan", "Monthly body scan",
+      "Priority class booking", "1 PT session / month", "Guest pass (1/mo)",
+      "Exclusive member events", "Online workout library", "Coach messaging",
     ],
   },
   {
@@ -87,24 +87,24 @@ const TIERS = [
     price: { monthly: 99, annual: Math.floor(99 * 12 * 0.8) },
     cta: "START BURNING",
     features: [
-      "Everything in Pro","4 PT sessions / month","VIP locker",
-      "Unlimited guest passes","Competition prep coaching","Quarterly photoshoot",
-      "Early event registration","Branded merch pack","24/7 priority access",
-      "Personalized programming","Monthly video review","Direct coach hotline",
-      "Recovery therapy sessions","Supplement discounts (20%)","Free parking","Annual retreat invite",
+      "Everything in Pro", "4 PT sessions / month", "VIP locker",
+      "Unlimited guest passes", "Competition prep coaching", "Quarterly photoshoot",
+      "Early event registration", "Branded merch pack", "24/7 priority access",
+      "Personalized programming", "Monthly video review", "Direct coach hotline",
+      "Recovery therapy sessions", "Supplement discounts (20%)", "Free parking", "Annual retreat invite",
     ],
   },
 ];
 
 const COMPARISON = [
-  { label: "Gym Floor Access",  icon: "🏋️", s: true,     p: true,        e: true },
-  { label: "Group Classes",     icon: "👥", s: "1 / wk", p: "Unlimited", e: "Unlimited" },
-  { label: "Recovery Zone",     icon: "🔄", s: false,    p: true,        e: true },
-  { label: "Nutrition Plan",    icon: "🥗", s: "Basic",  p: "Custom",    e: "Custom" },
-  { label: "PT Sessions",       icon: "💪", s: false,    p: "1 / mo",    e: "4 / mo" },
-  { label: "Guest Passes",      icon: "✖️", s: false,    p: "1 / mo",    e: "Unlimited" },
-  { label: "24/7 Access",       icon: "⚙️", s: false,    p: false,       e: true },
-  { label: "Competition Prep",  icon: "⚙️", s: false,    p: false,       e: true },
+  { label: "Gym Floor Access", icon: "🏋️", s: true, p: true, e: true },
+  { label: "Group Classes", icon: "👥", s: "1 / wk", p: "Unlimited", e: "Unlimited" },
+  { label: "Recovery Zone", icon: "🔄", s: false, p: true, e: true },
+  { label: "Nutrition Plan", icon: "🥗", s: "Basic", p: "Custom", e: "Custom" },
+  { label: "PT Sessions", icon: "💪", s: false, p: "1 / mo", e: "4 / mo" },
+  { label: "Guest Passes", icon: "✖️", s: false, p: "1 / mo", e: "Unlimited" },
+  { label: "24/7 Access", icon: "⚙️", s: false, p: false, e: true },
+  { label: "Competition Prep", icon: "⚙️", s: false, p: false, e: true },
 ];
 
 const FAQS = [
@@ -118,7 +118,7 @@ const FAQS = [
 
 // ── Cell renderer ──────────────────────────────────────────
 function Cell({ val, highlight }: { val: boolean | string; highlight?: boolean }) {
-  if (val === true)  return <div className="flex justify-center"><CheckSolid /></div>;
+  if (val === true) return <div className="flex justify-center"><CheckSolid /></div>;
   if (val === false) return <div className="flex justify-center"><CrossIcon /></div>;
   return (
     <span className={`font-barlow-condensed text-sm font-bold ${highlight ? "text-[#FF6600]" : "text-gray-300"}`}>
@@ -167,12 +167,12 @@ export default function MembershipPage() {
             {/* Logo */}
             <div className="mb-6">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 35L5 10H35L20 35Z" stroke="#FF6600" strokeWidth="2" fill="rgba(255,102,0,0.2)"/>
-                <path d="M12 14L20 28L28 14H12Z" fill="#FF6600"/>
+                <path d="M20 35L5 10H35L20 35Z" stroke="#FF6600" strokeWidth="2" fill="rgba(255,102,0,0.2)" />
+                <path d="M12 14L20 28L28 14H12Z" fill="#FF6600" />
               </svg>
             </div>
 
-            <h1 className="font-bebas text-7xl md:text-9xl leading-none italic uppercase tracking-wider" style={{ textShadow: "0 0 40px rgba(255,102,0,0.4)" }}>
+            <h1 className="font-bebas text-7xl md:text-9xl leading-none uppercase tracking-wider" style={{ textShadow: "0 0 40px rgba(255,102,0,0.4)" }}>
               MEMBER<span className="text-[#FF6600]">SHIP</span>
             </h1>
 
@@ -326,7 +326,7 @@ export default function MembershipPage() {
         <section className="max-w-5xl mx-auto px-6 mt-32">
           {/* Heading */}
           <div className="text-center mb-4">
-            <h2 className="font-bebas italic" style={{ fontSize: "clamp(52px, 8vw, 90px)", lineHeight: 1 }}>
+            <h2 className="font-bebas" style={{ fontSize: "clamp(52px, 8vw, 90px)", lineHeight: 1 }}>
               PLAN <span className="text-[#FF6600]">COMPARISON</span>
             </h2>
           </div>
@@ -334,8 +334,8 @@ export default function MembershipPage() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-[1px] w-16 bg-[#FF6600]/50" />
             <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
-              <path d="M20 35L5 10H35L20 35Z" stroke="#FF6600" strokeWidth="2" fill="rgba(255,102,0,0.15)"/>
-              <path d="M12 14L20 28L28 14H12Z" fill="#FF6600"/>
+              <path d="M20 35L5 10H35L20 35Z" stroke="#FF6600" strokeWidth="2" fill="rgba(255,102,0,0.15)" />
+              <path d="M12 14L20 28L28 14H12Z" fill="#FF6600" />
             </svg>
             <div className="h-[1px] w-16 bg-[#FF6600]/50" />
           </div>
@@ -419,7 +419,7 @@ export default function MembershipPage() {
             <div className="h-[1px] w-12 bg-[#FF6600]/30" />
             <div className="flex items-center gap-2 text-gray-500 text-xs font-barlow-condensed tracking-widest">
               <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-                <path d="M10 2L3 6v5c0 4 3 7.5 7 9 4-1.5 7-5 7-9V6L10 2z" stroke="#FF6600" strokeWidth="1.2" fill="none"/>
+                <path d="M10 2L3 6v5c0 4 3 7.5 7 9 4-1.5 7-5 7-9V6L10 2z" stroke="#FF6600" strokeWidth="1.2" fill="none" />
               </svg>
               UPGRADE ANYTIME. CANCEL ANYTIME.
             </div>
@@ -430,7 +430,7 @@ export default function MembershipPage() {
         {/* ── FAQ ── */}
         <section className="max-w-3xl mx-auto px-6 mt-28">
           <div className="text-center mb-12">
-            <h2 className="font-bebas text-5xl md:text-6xl italic">FREQUENTLY ASKED <span className="text-[#FF6600]">QUESTIONS</span></h2>
+            <h2 className="font-bebas text-5xl md:text-6xl">FREQUENTLY ASKED <span className="text-[#FF6600]">QUESTIONS</span></h2>
           </div>
           <div className="space-y-3">
             {FAQS.map((faq, i) => (
@@ -468,7 +468,7 @@ export default function MembershipPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,80,0,0.35)_0%,rgba(5,5,5,1)_65%)]" />
           <EmberParticles />
           <div className="relative z-10 px-6">
-            <h2 className="font-bebas text-6xl md:text-8xl italic text-white" style={{ textShadow: "0 0 40px rgba(255,80,0,0.7)" }}>
+            <h2 className="font-bebas text-6xl md:text-8xl text-white" style={{ textShadow: "0 0 40px rgba(255,80,0,0.7)" }}>
               START BURNING TODAY
             </h2>
             <p className="font-barlow text-gray-400 mt-4 mb-10 text-lg">Your transformation begins the moment you decide.</p>

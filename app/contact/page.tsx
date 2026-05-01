@@ -85,26 +85,23 @@ const FlameIcon = () => (
 );
 const IconBell = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="22" height="22">
-    <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" />
-    <path d="M13.73 21a2 2 0 01-3.46 0" />
+    <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 01-3.46 0" />
   </svg>
 );
 const IconCheckShield = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="28" height="28">
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-    <path d="M9 12l2 2 4-4" />
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="22" height="22">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" />
   </svg>
 );
 const IconLock = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="28" height="28">
-    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-    <path d="M7 11V7a5 5 0 0110 0v4" />
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="22" height="22">
+    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0110 0v4" />
   </svg>
 );
 const IconFlameCircle = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="28" height="28">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="22" height="22">
     <circle cx="12" cy="12" r="10" />
-    <path d="M12 17c2.21 0 4-1.79 4-4s-2.5-5-4-8c-1.5 3-4 5.79-4 8s1.79 4 4 4z" fill="currentColor" stroke="none" />
+    <path d="M12 16c0 0-3-3-3-6a3 3 0 016 0c0 3-3 6-3 6z" />
   </svg>
 );
 
@@ -115,17 +112,13 @@ export default function ContactPage() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".hero-text", { y: -50, opacity: 0, duration: 1, delay: 0.8 });
-      gsap.from(".contact-feature-card", {
-        scrollTrigger: { trigger: ".contact-feature-card", start: "top 80%" },
-        y: 60, opacity: 0, duration: 0.8, stagger: 0.15, ease: "back.out(1.5)",
-      });
-      gsap.from(".feature-icon", {
-        scrollTrigger: { trigger: ".contact-feature-card", start: "top 80%" },
-        scale: 0, opacity: 0, duration: 0.5, stagger: 0.1, delay: 0.3, ease: "back.out(2)",
-      });
       gsap.from(".form-section", {
         scrollTrigger: { trigger: ".form-section", start: "top 80%" },
         y: 60, opacity: 0, duration: 0.8,
+      });
+      gsap.from(".info-card", {
+        scrollTrigger: { trigger: ".info-grid", start: "top 80%" },
+        y: 80, opacity: 0, duration: 0.7, stagger: 0.15, ease: "back.out(1.5)",
       });
       gsap.from(".map-section", {
         scrollTrigger: { trigger: ".map-section", start: "top 85%" },
@@ -143,7 +136,6 @@ export default function ContactPage() {
 
   return (
     <PageTransition>
-
       <main ref={containerRef} className="min-h-screen bg-[#050505] text-white font-barlow pb-32">
 
         {/* ── Hero ── */}
@@ -165,7 +157,7 @@ export default function ContactPage() {
               </svg>
             </div>
 
-            <h1 className="font-bebas text-7xl md:text-9xl leading-none italic uppercase tracking-wider" style={{ textShadow: "0 0 40px rgba(255,102,0,0.4)" }}>
+            <h1 className="font-bebas text-7xl md:text-9xl leading-none uppercase tracking-wider" style={{ textShadow: "0 0 40px rgba(255,102,0,0.4)" }}>
               CONTACT <span className="text-[#FF6600]">US</span>
             </h1>
 
@@ -184,7 +176,7 @@ export default function ContactPage() {
         </section>
 
         {/* ── Contact Info Cards ── */}
-        <section className="relative max-w-6xl mx-auto px-6 mt-20 z-20">
+        <section className="relative max-w-6xl mx-auto px-6 mt-32 z-20">
 
           {/* Top Divider */}
           <div className="flex items-center justify-center gap-4 mb-20">
@@ -340,16 +332,16 @@ export default function ContactPage() {
         {/* ══════════════════════════════════════════
             SECTION 1 — SEND A MESSAGE  (Image 1)
         ══════════════════════════════════════════ */}
-        <section className="form-section" style={{ padding: "160px 24px 0", maxWidth: 1200, margin: "0 auto" }}>
+        <section className="form-section" style={{ padding: "140px 24px 0", maxWidth: 1200, margin: "0 auto" }}>
 
           {/* Heading */}
           <div style={{ textAlign: "center", marginBottom: 48, position: "relative" }}>
             {/* Watermark */}
-            {/* <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", pointerEvents: "none", zIndex: 0 }}>
+            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", pointerEvents: "none", zIndex: 0 }}>
               <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontStyle: "italic", fontSize: "clamp(80px,18vw,200px)", color: "rgba(255,255,255,0.03)", lineHeight: 1, whiteSpace: "nowrap" }}>SEND</span>
-            </div> */}
+            </div>
             <div style={{ position: "relative", zIndex: 1 }}>
-              <h2 className="font-bebas text-5xl md:text-7xl italic leading-none uppercase">
+              <h2 className="font-bebas text-5xl md:text-7xl leading-none uppercase">
                 SEND A <span className="text-[#FF6600]">MESSAGE</span>
               </h2>
               {/* divider */}
@@ -363,7 +355,7 @@ export default function ContactPage() {
           </div>
 
           {/* Two-column layout */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 24, alignItems: "start" }} className="md:grid-cols-[1fr_2fr] grid-cols-1">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 24, alignItems: "start" }}>
 
             {/* LEFT — info panel */}
             <div className="glow-card" style={{ padding: "32px 24px" }}>
@@ -388,7 +380,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
 
                 {/* Row 1 */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }} className="md:grid-cols-2 grid-cols-1">
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
                   <div>
                     <label className="field-label">FULL NAME</label>
                     <div className="input-wrap">
@@ -455,14 +447,14 @@ export default function ContactPage() {
         {/* ══════════════════════════════════════════
             SECTION 2 — FIND US / MAP  (Image 3)
         ══════════════════════════════════════════ */}
-        <section className="map-section" style={{ maxWidth: 1200, margin: "160px auto 0", padding: "0 24px" }}>
+        <section className="map-section" style={{ maxWidth: 1200, margin: "140px auto 0", padding: "0 24px" }}>
           {/* Heading */}
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <p style={{ fontFamily: "'Barlow Condensed'", fontWeight: 700, fontSize: 11, letterSpacing: 5, color: "#FF6600", marginBottom: 4 }}>
               — — &nbsp; LET'S TRAIN TOGETHER &nbsp; — —
             </p>
-            <h2 className="font-bebas text-5xl md:text-7xl italic leading-none uppercase">
-              FIND <span style={{ color: "#FF6600" }}>US</span>
+            <h2 className="font-bebas text-5xl md:text-7xl leading-none uppercase">
+              FIND <span className="text-[#FF6600]">US</span>
             </h2>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 12 }}>
               <div className="divider-line" style={{ maxWidth: 140 }} />
@@ -473,7 +465,7 @@ export default function ContactPage() {
           </div>
 
           {/* Two columns */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, alignItems: "start" }} className="md:grid-cols-2 grid-cols-1">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, alignItems: "start" }}>
 
             {/* LEFT — contact info rows */}
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -508,7 +500,7 @@ export default function ContactPage() {
                 <div className="radar-ring" style={{ width: 120, height: 120, animationDelay: "1s" }} />
                 <div className="radar-ring" style={{ width: 160, height: 160, animationDelay: "2s" }} />
                 {/* map road lines */}
-                <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: 0.15 }} viewBox="0 0 600 320" preserveAspectRatio="none">
+                <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: 0.15 }} viewBox="0 0 600 320">
                   <line x1="0" y1="160" x2="600" y2="160" stroke="#FF6600" strokeWidth="1" />
                   <line x1="360" y1="0" x2="360" y2="320" stroke="#FF6600" strokeWidth="1" />
                   <line x1="0" y1="80" x2="600" y2="200" stroke="#FF6600" strokeWidth="0.5" />
@@ -555,7 +547,7 @@ export default function ContactPage() {
         {/* ══════════════════════════════════════════
             SECTION 3 — GYM HOURS  (Image 2)
         ══════════════════════════════════════════ */}
-        <section style={{ maxWidth: 1000, margin: "160px auto 160px", padding: "0 24px" }}>
+        <section style={{ maxWidth: 1000, margin: "140px auto 0", padding: "0 24px" }}>
 
           {/* Heading */}
           <div style={{ textAlign: "center", marginBottom: 48, position: "relative" }}>
@@ -569,8 +561,8 @@ export default function ContactPage() {
                 <IconClock />
                 <div style={{ height: 1, width: 60, background: "linear-gradient(to left, transparent, #FF6600)" }} />
               </div>
-              <h2 className="font-bebas text-5xl md:text-7xl italic leading-none uppercase">
-                GYM <span style={{ color: "#FF6600" }}>HOURS</span>
+              <h2 className="font-bebas text-5xl md:text-7xl leading-none uppercase">
+                GYM <span className="text-[#FF6600]">HOURS</span>
               </h2>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginTop: 6, marginBottom: 10 }}>
                 <div style={{ height: 1, width: 120, background: "linear-gradient(to right, transparent, rgba(255,102,0,0.4))" }} />
@@ -581,7 +573,7 @@ export default function ContactPage() {
           </div>
 
           {/* Cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }} className="md:grid-cols-2 grid-cols-1">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
             {[
               { day: "WEEKDAYS", time: "5:00 AM — 11:00 PM" },
               { day: "WEEKENDS", time: "7:00 AM — 9:00 PM" },

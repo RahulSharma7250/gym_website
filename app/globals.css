@@ -282,3 +282,159 @@
   flex-wrap: nowrap;
   width: max-content;
 }
+
+/* ═══════════════════════════════════════ */
+/*  CONTACT PAGE STYLES                    */
+/* ═══════════════════════════════════════ */
+
+/* ── Ember particle dots ── */
+@keyframes ember-float {
+  0%   { transform: translateY(0) scale(1);   opacity: 0.8; }
+  100% { transform: translateY(-120px) scale(0); opacity: 0; }
+}
+.ember { position:absolute; border-radius:50%; background:var(--fire-orange); animation: ember-float linear infinite; }
+
+/* ── Hex icon badge ── */
+.hex-badge {
+  width: 56px; height: 56px;
+  background: rgba(255,102,0,0.12);
+  border: 1.5px solid var(--fire-orange);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--fire-orange); flex-shrink: 0;
+  clip-path: polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);
+}
+
+/* ── Orange glow card border ── */
+.glow-card {
+  background: #0d0d0d;
+  border: 1.5px solid rgba(255,102,0,0.35);
+  border-radius: 8px;
+  box-shadow: 0 0 18px rgba(255,102,0,0.08), inset 0 0 30px rgba(255,102,0,0.04);
+}
+
+/* ── Input style ── */
+.inferno-input {
+  width: 100%; background: #1a1a1a;
+  border: 1px solid rgba(255,102,0,0.2);
+  border-radius: 4px;
+  color: #fff; padding: 14px 16px 14px 44px;
+  font-family: 'Barlow', sans-serif; font-size: 14px;
+  outline: none; transition: border-color .2s;
+}
+.inferno-input:focus { border-color: var(--fire-orange); }
+.inferno-input::placeholder { color: #555; }
+.input-wrap { position: relative; }
+.input-icon {
+  position: absolute; left: 14px; top: 50%;
+  transform: translateY(-50%); color: var(--fire-orange);
+  pointer-events: none;
+}
+.input-icon-top { position: absolute; left: 14px; top: 18px; color: var(--fire-orange); pointer-events: none; }
+
+/* ── Send button ── */
+.send-btn {
+  background: var(--fire-orange);
+  color: #000;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; letter-spacing: 3px; font-size: 15px;
+  padding: 18px 48px;
+  border: none; cursor: pointer;
+  clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  display: inline-flex; align-items: center; gap: 12px;
+  transition: background .2s, transform .15s;
+}
+.send-btn:hover { background: #ff8833; transform: scale(1.02); }
+
+/* ── Map grid lines ── */
+.map-grid {
+  background-image:
+    linear-gradient(rgba(255,102,0,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,102,0,0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* ── Contact info row ── */
+.contact-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255,102,0,0.2);
+  border-radius: 6px;
+  background: rgba(255,102,0,0.04);
+}
+
+/* ── Label above input ── */
+.field-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 11px;
+  letter-spacing: 3px; color: #999; margin-bottom: 8px;
+  display: block;
+}
+
+/* ── Divider line with icon ── */
+.divider-line {
+  height: 1px; flex: 1;
+  background: linear-gradient(to right, transparent, var(--fire-orange));
+}
+.divider-line.rev { background: linear-gradient(to left, transparent, var(--fire-orange)); }
+
+/* ── Section heading ── */
+.section-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-style: italic; text-transform: uppercase;
+  line-height: 0.9;
+}
+.section-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600; letter-spacing: 6px; font-size: 12px;
+  color: #999; text-transform: uppercase;
+}
+
+select.inferno-input { -webkit-appearance: none; appearance: none; cursor: pointer; }
+textarea.inferno-input { resize: none; padding-top: 14px; }
+
+/* ── Hours card ── */
+.hours-card {
+  background: #0d0d0d;
+  border: 1.5px solid rgba(255,102,0,0.3);
+  border-radius: 10px;
+  padding: 40px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hours-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,102,0,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.icon-circle {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: radial-gradient(circle, #2a1500 0%, #111 70%);
+  border: 1px solid rgba(255,102,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px; color: var(--fire-orange);
+}
+.time-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  border: 1.5px solid var(--fire-orange); border-radius: 50px;
+  padding: 10px 24px; margin: 16px 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 20px; color: #fff;
+}
+
+/* ── Radar rings on map ── */
+@keyframes radar-pulse {
+  0%   { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.radar-ring {
+  position: absolute; border-radius: 50%;
+  border: 1px dashed rgba(255,102,0,0.5);
+  top: 50%; left: 60%;
+  transform: translate(-50%, -50%);
+  animation: radar-pulse 3s ease-out infinite;
+}
+@keyframes pin-bounce { 0%,100% { transform:translate(-50%,-60%) scale(1); } 50% { transform:translate(-50%,-70%) scale(1.08); } }
+.map-pin { animation: pin-bounce 2.5s ease-in-out infinite; }

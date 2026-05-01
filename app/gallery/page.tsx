@@ -83,7 +83,7 @@ export default function GalleryPage() {
               </svg>
             </div>
 
-            <h1 className="hero-text font-bebas text-7xl md:text-9xl leading-none italic uppercase tracking-wider" style={{ textShadow: "0 0 40px rgba(255,102,0,0.4)" }}>
+            <h1 className="hero-text font-bebas text-7xl md:text-9xl leading-none uppercase tracking-wider" style={{ textShadow: "0 0 40px rgba(255,102,0,0.4)" }}>
               THE <span className="text-[#FF6600]">GALLERY</span>
             </h1>
 
@@ -103,23 +103,22 @@ export default function GalleryPage() {
 
         {/* ── Filters & Grid Section ── */}
         <section className="relative py-24 px-6 max-w-7xl mx-auto bg-[#050505]">
-          <div className="flex flex-col lg:flex-row gap-12 items-start lg:items-end mb-12 section-text-anim">
-            <div className="lg:w-1/2">
-              <div className="flex items-center gap-4 mb-2">
-                <h3 className="font-barlow-condensed font-bold tracking-widest text-[#FF6600] text-sm uppercase">OUR FACILITY</h3>
-                <div className="h-[1px] w-24 bg-[#FF6600] relative">
-                  <div className="absolute right-0 top-[-3px] w-2 h-[1px] bg-[#FF6600] origin-right rotate-45"></div>
-                </div>
-              </div>
-              <h2 className="font-bebas text-5xl md:text-7xl italic leading-none uppercase">INSIDE THE INFERNO</h2>
-              <p className="mt-6 text-gray-400 font-barlow text-lg max-w-md">
-                Take a look at the equipment, the environment, and the community that makes Inferno Gym unlike any other.
-              </p>
+          <div className="flex flex-col items-center text-center mb-12 section-text-anim">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#FF6600]"></div>
+              <h3 className="font-barlow-condensed font-bold tracking-[6px] text-[#FF6600] text-sm uppercase">OUR FACILITY</h3>
+              <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#FF6600]"></div>
             </div>
+            <h2 className="font-bebas text-5xl md:text-7xl leading-none uppercase">
+              INSIDE THE <span className="text-[#FF6600]">INFERNO</span>
+            </h2>
+            <p className="mt-6 text-gray-400 font-barlow text-lg max-w-2xl mx-auto">
+              Take a look at the equipment, the environment, and the community that makes Inferno Gym unlike any other.
+            </p>
           </div>
 
           {/* Filters */}
-          <div className="flex flex-wrap gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
             {FILTERS.map(f => (
               <button
                 key={f}

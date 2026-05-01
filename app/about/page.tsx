@@ -293,22 +293,78 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="mission-items grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-              {[
-                { icon: "🛡️", t1: "BUILT ON", t2: "DISCIPLINE" },
-                { icon: "🏋️", t1: "TRAINED FOR", t2: "STRENGTH" },
-                { icon: "👥", t1: "UNITED BY", t2: "COMMUNITY" },
-                { icon: "⛰️", t1: "DRIVEN BY", t2: "PURPOSE" }
-              ].map((item, i) => (
-                <div key={i} className="mission-item relative">
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h4 className="font-bebas text-xl tracking-wider">
-                    {item.t1} <br /><span className="text-[#FF6600] italic">{item.t2}</span>
-                  </h4>
-                  {/* Small glowing dot below */}
-                  <div className="w-6 h-[2px] bg-[#FF6600] mx-auto mt-4 shadow-[0_0_10px_#FF6600]"></div>
+            <div className="mission-items flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-0 mt-8 text-center w-full max-w-5xl mx-auto px-4">
+
+              {/* Item 1 */}
+              <div className="mission-item flex flex-col items-center">
+                <div className="mb-6 drop-shadow-[0_0_10px_rgba(255,102,0,0.15)] text-gray-300">
+                  <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#aaa" />
+                    <path d="M9 10h6l-3 5-3-5z" stroke="#FF6600" strokeWidth="1.5" />
+                    <path d="M10.5 11h3l-1.5 2.5-1.5-2.5z" fill="#FF6600" stroke="none" />
+                  </svg>
                 </div>
-              ))}
+                <h4 className="font-bebas text-2xl tracking-widest text-white">
+                  BUILT ON <br /><span className="text-[#FF6600] italic">DISCIPLINE</span>
+                </h4>
+              </div>
+
+              <div className="hidden lg:block w-[1px] h-20 bg-gradient-to-b from-transparent via-[#FF6600] to-transparent shadow-[0_0_15px_#FF6600]"></div>
+
+              {/* Item 2 */}
+              <div className="mission-item flex flex-col items-center">
+                <div className="mb-6 drop-shadow-[0_0_10px_rgba(255,102,0,0.15)] text-gray-300">
+                  <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#aaa" strokeWidth="1.5">
+                    <path d="M8 12h8" />
+                    <rect x="7" y="8" width="2" height="8" rx="0.5" />
+                    <rect x="15" y="8" width="2" height="8" rx="0.5" />
+                    <rect x="4" y="9" width="2" height="6" rx="0.5" />
+                    <rect x="18" y="9" width="2" height="6" rx="0.5" />
+                    <path d="M3 10v4M21 10v4" />
+                  </svg>
+                </div>
+                <h4 className="font-bebas text-2xl tracking-widest text-white">
+                  TRAINED FOR <br /><span className="text-[#FF6600] italic">STRENGTH</span>
+                </h4>
+              </div>
+
+              <div className="hidden lg:block w-[1px] h-20 bg-gradient-to-b from-transparent via-[#FF6600] to-transparent shadow-[0_0_15px_#FF6600]"></div>
+
+              {/* Item 3 */}
+              <div className="mission-item flex flex-col items-center">
+                <div className="mb-6 drop-shadow-[0_0_10px_rgba(255,102,0,0.15)] text-gray-300">
+                  <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#aaa" strokeWidth="1.2">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M18 21v-2a6 6 0 0 0-12 0v2" />
+                    <circle cx="6" cy="10" r="3" />
+                    <path d="M2.5 21v-2a4 4 0 0 1 4-4" />
+                    <circle cx="18" cy="10" r="3" />
+                    <path d="M21.5 21v-2a4 4 0 0 0-4-4" />
+                  </svg>
+                </div>
+                <h4 className="font-bebas text-2xl tracking-widest text-white">
+                  UNITED BY <br /><span className="text-[#FF6600] italic">COMMUNITY</span>
+                </h4>
+              </div>
+
+              <div className="hidden lg:block w-[1px] h-20 bg-gradient-to-b from-transparent via-[#FF6600] to-transparent shadow-[0_0_15px_#FF6600]"></div>
+
+              {/* Item 4 */}
+              <div className="mission-item flex flex-col items-center">
+                <div className="mb-6 drop-shadow-[0_0_10px_rgba(255,102,0,0.15)] text-gray-300">
+                  <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#aaa" strokeWidth="1.2">
+                    <path d="M8 20L12 6l4 14" />
+                    <path d="M3 20l4.5-8 2 3.5" />
+                    <path d="M21 20l-4.5-8-2 3.5" />
+                    <path d="M12 6l2 7H10L12 6z" stroke="#FF6600" />
+                    <path d="M12 6l2 7-4-2L12 6z" fill="#FF6600" stroke="none" />
+                  </svg>
+                </div>
+                <h4 className="font-bebas text-2xl tracking-widest text-white">
+                  DRIVEN BY <br /><span className="text-[#FF6600] italic">PURPOSE</span>
+                </h4>
+              </div>
+
             </div>
           </div>
         </section>
@@ -350,7 +406,7 @@ export default function AboutPage() {
                         {/* Year title position based on left or right */}
                         <h4 className={`absolute -top-10 md:-top-14 ${isLeft ? 'md:right-0' : 'md:left-0'} font-bebas text-4xl text-[#FF6600]`}>{t.year}</h4>
 
-                        <div className="bg-[#0a0a0a] border border-white/10 p-6 relative transition-colors duration-300 hover:border-[#FF6600]/40"
+                        <div className="bg-[#0a0a0a] border border-[#FF6600]/50 p-6 relative transition-colors duration-300 hover:border-[#FF6600]/40"
                           style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%)" }}>
 
                           {/* Triangle pointer to center line */}

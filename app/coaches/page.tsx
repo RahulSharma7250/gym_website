@@ -25,7 +25,7 @@ export default function CoachesPage() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".hero-text", { y: -50, opacity: 0, duration: 1, delay: 0.8 });
-      
+
       const texts = gsap.utils.toArray(".section-text-anim");
       texts.forEach((text) => {
         gsap.fromTo(text as HTMLElement,
@@ -71,12 +71,12 @@ export default function CoachesPage() {
             {/* Logo */}
             <div className="mb-6">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 35L5 10H35L20 35Z" stroke="#FF6600" strokeWidth="2" fill="rgba(255,102,0,0.2)"/>
-                <path d="M12 14L20 28L28 14H12Z" fill="#FF6600"/>
+                <path d="M20 35L5 10H35L20 35Z" stroke="#FF6600" strokeWidth="2" fill="rgba(255,102,0,0.2)" />
+                <path d="M12 14L20 28L28 14H12Z" fill="#FF6600" />
               </svg>
             </div>
 
-            <h1 className="font-bebas text-7xl md:text-9xl leading-none italic uppercase tracking-wider" style={{ textShadow: "0 0 40px rgba(255,102,0,0.4)" }}>
+            <h1 className="font-bebas text-7xl md:text-9xl leading-none uppercase tracking-wider" style={{ textShadow: "0 0 40px rgba(255,102,0,0.4)" }}>
               MEET THE <span className="text-[#FF6600]">COACHES</span>
             </h1>
 
@@ -96,67 +96,66 @@ export default function CoachesPage() {
 
 
         <section className="relative py-24 px-6 max-w-7xl mx-auto bg-[#050505]">
-          <div className="flex flex-col lg:flex-row gap-12 items-start lg:items-end mb-16 section-text-anim">
-            <div className="lg:w-1/2">
-              <div className="flex items-center gap-4 mb-2">
-                <h3 className="font-barlow-condensed font-bold tracking-widest text-[#FF6600] text-sm uppercase">THE TEAM</h3>
-                <div className="h-[1px] w-24 bg-[#FF6600] relative">
-                  <div className="absolute right-0 top-[-3px] w-2 h-[1px] bg-[#FF6600] origin-right rotate-45"></div>
-                </div>
-              </div>
-              <h2 className="font-bebas text-5xl md:text-7xl italic leading-none uppercase">OUR EXPERT COACHES</h2>
-              <p className="mt-6 text-gray-400 font-barlow text-lg max-w-md">
-                Our coaches have been through the fire. They are here to guide you, push you, and ensure you reach your maximum potential.
-              </p>
+          <div className="flex flex-col items-center text-center mb-16 section-text-anim">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#FF6600]"></div>
+              <h3 className="font-barlow-condensed font-bold tracking-[6px] text-[#FF6600] text-sm uppercase">THE TEAM</h3>
+              <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#FF6600]"></div>
             </div>
+            <h2 className="font-bebas text-5xl md:text-7xl leading-none uppercase">
+              OUR EXPERT <span className="text-[#FF6600]">COACHES</span>
+            </h2>
+            <p className="mt-6 text-gray-400 font-barlow text-lg max-w-2xl mx-auto">
+              Our coaches have been through the fire. They are here to guide you, push you, and ensure you reach your maximum potential.
+            </p>
           </div>
 
           <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative mt-12">
             {COACHES.map((coach, i) => (
-               <div
-                  key={i}
-                  className="coach-card relative group transition-all duration-300 flex flex-col items-center pt-10 pb-8 px-6 text-center"
+              <div
+                key={i}
+                className="coach-card relative group transition-all duration-300 flex flex-col items-center pt-10 pb-8 px-6 text-center"
+                style={{
+                  background: "#0c0c0c",
+                  border: "1px solid rgba(255,102,0,0.18)",
+                  clipPath: "polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px))",
+                }}
+              >
+                {/* Left orange glow bar */}
+                <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#FF6600]/80 via-[#FF6600]/40 to-transparent" />
+                {/* Bottom orange glow bar */}
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#FF6600]/60 via-[#FF6600]/20 to-transparent opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                {/* Decorative orange tick marks top-right */}
+                <div className="absolute top-4 right-5 flex flex-col items-end gap-[5px]">
+                  <div className="w-6 h-[2px] bg-[#FF6600] opacity-60 rotate-[-40deg] origin-right" />
+                  <div className="w-4 h-[2px] bg-[#FF6600] opacity-40 rotate-[-40deg] origin-right" />
+                </div>
+
+                {/* CSS Avatar Initials */}
+                <div className="w-[88px] h-[88px] rounded-full flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_0_24px_rgba(255,102,0,0.35)] mb-6"
                   style={{
-                    background: "#0c0c0c",
-                    border: "1px solid rgba(255,102,0,0.18)",
-                    clipPath: "polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px))",
+                    background: "#080808",
+                    border: "1.5px solid rgba(255,102,0,0.35)",
+                    boxShadow: "0 0 0 6px rgba(255,102,0,0.06)",
                   }}
                 >
-                  {/* Left orange glow bar */}
-                  <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#FF6600]/80 via-[#FF6600]/40 to-transparent" />
-                  {/* Bottom orange glow bar */}
-                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#FF6600]/60 via-[#FF6600]/20 to-transparent opacity-70 group-hover:opacity-100 transition-opacity" />
-
-                  {/* Decorative orange tick marks top-right */}
-                  <div className="absolute top-4 right-5 flex flex-col items-end gap-[5px]">
-                    <div className="w-6 h-[2px] bg-[#FF6600] opacity-60 rotate-[-40deg] origin-right" />
-                    <div className="w-4 h-[2px] bg-[#FF6600] opacity-40 rotate-[-40deg] origin-right" />
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-[#1a0a00] to-[#FF6600] flex items-center justify-center relative">
+                    <span className="font-bebas text-4xl text-white mix-blend-overlay">{coach.initials}</span>
                   </div>
+                </div>
 
-                  {/* CSS Avatar Initials */}
-                  <div className="w-[88px] h-[88px] rounded-full flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_0_24px_rgba(255,102,0,0.35)] mb-6"
-                       style={{
-                         background: "#080808",
-                         border: "1.5px solid rgba(255,102,0,0.35)",
-                         boxShadow: "0 0 0 6px rgba(255,102,0,0.06)",
-                       }}
-                  >
-                     <div className="w-full h-full rounded-full bg-gradient-to-br from-[#1a0a00] to-[#FF6600] flex items-center justify-center relative">
-                        <span className="font-bebas text-4xl text-white mix-blend-overlay">{coach.initials}</span>
-                     </div>
-                  </div>
+                <h3 className="font-bebas text-3xl italic tracking-wide text-white mb-1 leading-tight">{coach.name}</h3>
+                <span className="font-barlow-condensed font-bold text-[#FF6600] tracking-widest text-sm mb-4 uppercase">{coach.exp} EXPERIENCE</span>
 
-                  <h3 className="font-bebas text-3xl italic tracking-wide text-white mb-1 leading-tight">{coach.name}</h3>
-                  <span className="font-barlow-condensed font-bold text-[#FF6600] tracking-widest text-sm mb-4 uppercase">{coach.exp} EXPERIENCE</span>
+                <p className="text-gray-400 text-sm leading-relaxed font-barlow mb-8 flex-1">
+                  {coach.bio}
+                </p>
 
-                  <p className="text-gray-400 text-sm leading-relaxed font-barlow mb-8 flex-1">
-                    {coach.bio}
-                  </p>
-
-                  <button className="font-barlow-condensed font-bold tracking-widest text-sm py-3 px-6 w-full border border-[#FF6600] text-[#FF6600] hover:bg-[#FF6600] hover:text-black transition-colors duration-300 mt-auto">
-                    BOOK SESSION
-                  </button>
-               </div>
+                <button className="font-barlow-condensed font-bold tracking-widest text-sm py-3 px-6 w-full border border-[#FF6600] text-[#FF6600] hover:bg-[#FF6600] hover:text-black transition-colors duration-300 mt-auto">
+                  BOOK SESSION
+                </button>
+              </div>
             ))}
           </div>
         </section>
