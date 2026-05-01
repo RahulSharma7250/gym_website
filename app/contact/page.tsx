@@ -301,7 +301,7 @@ export default function ContactPage() {
               <div className="text-[#FF6600]"><IconHeadset /></div>
               <div>
                 <h4 className="font-barlow-condensed font-bold tracking-wider text-white text-[13px] leading-tight mb-1">EXPERT SUPPORT</h4>
-                <p className="font-barlow text-gray-500 text-[13px] leading-tight">We're here to help</p>
+                <p className="font-barlow text-gray-500 text-[13px] leading-tight">We&apos;re here to help</p>
               </div>
             </div>
             {/* Divider */}
@@ -321,7 +321,7 @@ export default function ContactPage() {
               <div className="text-[#FF6600]"><IconFlameCircle /></div>
               <div>
                 <h4 className="font-barlow-condensed font-bold tracking-wider text-white text-[13px] leading-tight mb-1">BUILT FOR YOU</h4>
-                <p className="font-barlow text-gray-500 text-[13px] leading-tight">Let's achieve more together</p>
+                <p className="font-barlow text-gray-500 text-[13px] leading-tight">Let&apos;s achieve more together</p>
               </div>
             </div>
           </div>
@@ -429,7 +429,7 @@ export default function ContactPage() {
                 {submitted ? (
                   <div style={{ background: "rgba(255,102,0,0.1)", border: "1px solid #FF6600", borderRadius: 6, padding: "24px", textAlign: "center" }}>
                     <p style={{ fontFamily: "'Barlow Condensed'", fontWeight: 900, fontSize: 28, color: "#FF6600" }}>MESSAGE SENT 🔥</p>
-                    <p style={{ fontFamily: "'Barlow'", color: "#aaa", marginTop: 8 }}>We'll get back to you within 24 hours.</p>
+                    <p style={{ fontFamily: "'Barlow'", color: "#aaa", marginTop: 8 }}>We&apos;ll get back to you within 24 hours.</p>
                   </div>
                 ) : (
                   <div style={{ textAlign: "center", paddingTop: 8 }}>
@@ -450,7 +450,7 @@ export default function ContactPage() {
           {/* Heading */}
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <p style={{ fontFamily: "'Barlow Condensed'", fontWeight: 700, fontSize: 11, letterSpacing: 5, color: "#FF6600", marginBottom: 4 }}>
-              — — &nbsp; LET'S TRAIN TOGETHER &nbsp; — —
+              — — &nbsp; LET&apos;S TRAIN TOGETHER &nbsp; — —
             </p>
             <h2 className="font-bebas text-5xl md:text-7xl leading-none uppercase">
               FIND <span className="text-[#FF6600]">US</span>
@@ -538,7 +538,7 @@ export default function ContactPage() {
               <div style={{ height: 1, width: 80, background: "linear-gradient(to left, transparent, #FF6600)" }} />
             </div>
             <p style={{ fontFamily: "'Barlow Condensed'", fontWeight: 600, fontSize: 12, letterSpacing: 5, color: "#666" }}>
-              COME FIND US. LET'S FUEL YOUR <span style={{ color: "#FF6600" }}>FIRE.</span>
+              COME FIND US. LET&apos;S FUEL YOUR <span style={{ color: "#FF6600" }}>FIRE.</span>
             </p>
           </div>
         </section>

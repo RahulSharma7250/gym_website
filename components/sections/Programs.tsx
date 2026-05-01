@@ -41,7 +41,7 @@ export default function Programs() {
       });
 
       // Parallax effect on the background numbers
-      gsap.utils.toArray<HTMLElement>('.prog-number').forEach((num, i) => {
+      gsap.utils.toArray<HTMLElement>('.prog-number').forEach((num) => {
         gsap.to(num, {
           scrollTrigger: {
             trigger: containerRef.current,

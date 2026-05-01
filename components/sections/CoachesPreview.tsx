@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SectionTitle from "@/components/ui/SectionTitle";
 import Link from "next/link";
 import Image from "next/image";
 

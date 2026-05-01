@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PageTransition from "@/components/layout/PageTransition";
-import AngleButton from "@/components/ui/AngleButton";
 import EmberParticles from "@/components/ui/EmberParticles";
 
 gsap.registerPlugin(ScrollTrigger);

@@ -3,8 +3,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SectionTitle from "@/components/ui/SectionTitle";
-import AngleButton from "@/components/ui/AngleButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -149,7 +147,7 @@ export default function Pricing() {
                   className="font-barlow-condensed font-extrabold text-[#ff6a00] text-[18px] mb-1"
                   style={{ letterSpacing: "-2px" }}
                 >
-                  ////
+                  {"////"}
                 </p>
 
                 {/* Tier name */}

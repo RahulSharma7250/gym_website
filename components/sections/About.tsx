@@ -58,13 +58,13 @@ export default function About() {
         {/* Top Slanted Images Collage */}
         <div className="absolute top-0 right-0 w-[90%] md:w-[85%] h-48 md:h-56 hidden md:flex gap-2">
           <div className="flex-1 transform -skew-x-[15deg] overflow-hidden bg-black shadow-2xl z-10">
-            <img src="/images/about_boxer.png" className="w-full h-full object-cover transform skew-x-[15deg] scale-125 object-top opacity-80" />
+            <img src="/images/about_boxer.png" alt="Boxer" className="w-full h-full object-cover transform skew-x-[15deg] scale-125 object-top opacity-80" />
           </div>
           <div className="flex-1 transform -skew-x-[15deg] overflow-hidden bg-black shadow-2xl z-20">
-            <img src="/images/about_female.png" className="w-full h-full object-cover transform skew-x-[15deg] scale-125 object-top opacity-80" />
+            <img src="/images/about_female.png" alt="Female Athlete" className="w-full h-full object-cover transform skew-x-[15deg] scale-125 object-top opacity-80" />
           </div>
           <div className="flex-1 transform -skew-x-[15deg] overflow-hidden bg-black shadow-2xl z-30 mr-[-5%]">
-            <img src="/images/about_bodybuilder.png" className="w-full h-full object-cover transform skew-x-[15deg] scale-125 object-top opacity-80" />
+            <img src="/images/about_bodybuilder.png" alt="Bodybuilder" className="w-full h-full object-cover transform skew-x-[15deg] scale-125 object-top opacity-80" />
           </div>
         </div>
 
@@ -76,10 +76,10 @@ export default function About() {
 
           <div className="space-y-6">
             <p className="font-barlow text-gray-300 text-sm leading-relaxed max-w-[95%]">
-              We don't believe in quick fixes or comfortable routines. At Inferno, we provide the elite equipment, the hardcore atmosphere, and the uncompromising community you need to shatter your limits.
+              We don&apos;t believe in quick fixes or comfortable routines. At Inferno, we provide the elite equipment, the hardcore atmosphere, and the uncompromising community you need to shatter your limits.
             </p>
             <p className="font-barlow text-[#888] text-xs leading-relaxed max-w-[95%]">
-              Whether you're stepping onto the platform for the first time or preparing for your next professional bout, our walls are built to handle your intensity.
+              Whether you&apos;re stepping onto the platform for the first time or preparing for your next professional bout, our walls are built to handle your intensity.
             </p>
           </div>
         </div>
